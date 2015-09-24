@@ -47,7 +47,6 @@ func init() {
 	if _, err := toml.DecodeFile(*fConfig, &conf); err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(conf.ReportsPath)
 
 	c, err := axiom.NewClient(conf.VeracrossUsername, conf.VeracrossPassword,
 		conf.VeracrossSchool,
